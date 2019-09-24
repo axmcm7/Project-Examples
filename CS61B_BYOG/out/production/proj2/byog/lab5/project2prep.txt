@@ -1,0 +1,57 @@
+Q: Can you think of an analogy between the process of tesselating hexagons and randomly generating a world using rooms and hallways? 
+What is the hexagon and what is the tesselation on the project 2 side?
+
+A:
+
+-----
+Q: If you were to start working on world generation, what kind of method would you think of writing first? 
+Think back to the lab and the process used to eventually get to tesselating hexagons.
+
+A:
+
+-----
+Q: What distinguishes a hallway from a room? How are they similar?
+
+A:
+
+-----
+Q: For tesselating hexagons, one of the hardest parts is figuring out where to place each hexagon/how to easily place hexagons on screen in an algorithmic way. 
+After looking at your own implemention, consider the implementation provided near the end of the lab. 
+How did your implementation differ from the given one? What lessons can be learned from it?
+
+A:
+
+-----
+Q: Consider an algorithm for placing rooms and hallways on your map. 
+Ideally, consider many algorithms and think about what makes some easier or harder to implement. Try and bring those ideas together into a single simple algorithm which accomplishes the task. 
+In general, algorithms with as few edge cases as possible are better algorithms.
+
+A:
+
+Random Hallways Algorithm:
+
+1) Number of Vertical Hallways: Generate random number of vertical hallways, should be number between
+    5 and 15.
+
+2) Number of Horizontal Hallways: Generate random number of horizontal hallways, should be number between
+    3 and 7.
+
+3) First (leftmost) Vertical Hallway: Generate a random number between 1 and 5, to determine the
+    x position of the first vertical hallway
+
+4) First (bottommost) Horizontal Hallway: Generate a random number between 1 and 4, to determine y position
+    of the first horizontal hallway
+
+5) For each vertical hallway, generate a random number between 2 and 6 to indicate the spacing from
+   the last vertical hallway. Should be random each time.
+
+6) For each horizontal hallway, generate a random number between 2 and 4 to indicate the spacing from
+   the last horizontal hallway. Should be random each time.
+
+7) For each vertical hallway, the center y position is 15. Randomly extend the hallway up/down in two
+    random, independently-determined lengths from 10 to 14. Store the x position of each vertical hallway
+    in an array.
+
+8) For each horizontal hallway, the center x position is 40. Randomly extend the hallway left/right in two
+    random, independently-determined lengths from 34 to 39. Store the y position of each horizontal
+    hallway in an array.
